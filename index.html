@@ -9,45 +9,47 @@
   <body class="blurred">
     <header class="header">
       <div class="header-left">
-        <img class="weather-icon large" src="icons/sun.svg" data-current-icon />
-        <div class="header-current-temp">
-          <span data-current-temp>31</span>&deg;
-        </div>
+        <div class="main-place">My place, Country</div>
+        <div class="main-weather">
+          <img class="weather-icon large" src="icons/sun.svg" data-current-icon />
+          <div class="header-current-temp">
+            <span data-current-temp>31</span>&deg;C
+          </div></div>
       </div>
       <div class="header-right">
         <div class="info-group">
           <div class="label">HIGH</div>
-          <div><span data-current-high>32</span>&deg;</div>
+          <div><span data-current-high>32</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">FL HIGH</div>
-          <div><span data-current-fl-high>27</span>&deg;</div>
+          <div><span data-current-fl-high>27</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">WIND</div>
           <div>
             <span data-current-wind>9</span
-            ><span class="value-sub-info">km/h</span>
+            ><span class="value-sub-info"> km/h</span>
           </div>
         </div>
 
         <div class="info-group">
           <div class="label">LOW</div>
-          <div><span data-current-low>19</span>&deg;</div>
+          <div><span data-current-low>19</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">FL LOW</div>
-          <div><span data-current-fl-low>12</span>&deg;</div>
+          <div><span data-current-fl-low>12</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">PRECIP</div>
           <div>
             <span data-current-precip>0.1</span
-            ><span class="value-sub-info">mm</span>
+            ><span class="value-sub-info"> mm</span>
           </div>
         </div>
       </div>
@@ -55,37 +57,37 @@
 
     <section class="day-section" data-day-section>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon" />
+        <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Monday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon" />
+        <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Tuesday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon" />
+        <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Wednesday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon" />
+        <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Thursday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon" />
+        <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Fraiday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon" />
+        <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Saturday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="icons/cloud.svg" class="weather-icon" />
+        <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Sunday</div>
         <div>32&deg;</div>
       </div>
@@ -416,7 +418,7 @@
       <div class="day-card">
         <img data-icon class="weather-icon" />
         <div class="day-card-date" data-date></div>
-        <div><span data-temp></span><span>&deg;</span></div>
+        <div><span data-temp></span><span>&deg;C</span></div>
       </div>
     </template>
 
@@ -434,25 +436,25 @@
         <td>
           <div class="info-group">
             <div class="label">Temp</div>
-            <div><span data-temp></span><span>&deg;</span></div>
+            <div><span data-temp></span><span>&deg;C</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
             <div class="label">Fl Temp</div>
-            <div><span data-fl-temp></span><span>&deg;</span></div>
+            <div><span data-fl-temp></span><span>&deg;C</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
             <div class="label">Wind</div>
-            <div><span data-wind></span><span class="value-sub-info">km/h</span></div>
+            <div><span data-wind></span><span class="value-sub-info"> km/h</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
             <div class="label">Precip</div>
-            <div><span data-precip></span><span class="value-sub-info">mm</span></div>
+            <div><span data-precip></span><span class="value-sub-info"> mm</span></div>
           </div>
         </td>
       </tr>
