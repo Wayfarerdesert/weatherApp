@@ -13,7 +13,7 @@ function positionSuccess({ coords }) {
         .then(renderWeather)
         .catch(e => {
             console.log(e)
-            alert("Error getting weather info.")
+            alert("Error getting weather info.", e)
         })
 }
 
