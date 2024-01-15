@@ -7,7 +7,8 @@
 body {
   margin: 1rem;
   /* background-color: hsl(200, 100%, 85%); */
-  background-color: hsl(201, 100%, 59%);
+  /* background-color: hsl(201, 100%, 59%); */
+  background: linear-gradient(to bottom, hsl(201, 100%, 59%), hsl(200, 100%, 59%), hsl(200, 100%, 85%));
   color: hsl(200, 100%, 10%);
   font-family: sans-serif;
 }
@@ -41,6 +42,10 @@ body {
   justify-content: center;
 }
 
+.main-sub {
+  font-size: .75rem;
+}
+
 .weather-icon {
   width: 40px;
   height: 40px;
@@ -63,7 +68,7 @@ body {
   justify-content: space-around;
   gap: .5rem;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
 }
 
 .info-group {
@@ -86,7 +91,7 @@ body {
 
 .day-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 75px);
+  grid-template-columns: repeat(auto-fit, 80px);
   gap: .5rem;
   justify-content: center;
   padding: 1rem;
@@ -98,15 +103,29 @@ body {
   align-items: center;
   border: 1px solid #2EFFC0;
   border-radius: .25rem;
-  padding: .25rem;
-  color: white;
-  background: hsl(200, 100%, 29%);
+  padding: .5rem;
+  color: rgb(0, 0, 0);
+  /* background: hsl(200, 100%, 48%); */
+  /* background: hsl(147, 65%, 50%); */
+  background: hsl(42, 91%, 40%);
 }
 
 .day-card-date {
   font-size: .75rem;
-  color: white;
+  font-weight: bold;
+  color: rgb(236, 236, 236);
   margin-top: .5rem;
+}
+
+.day-card-date-num {
+  font-size: .55rem;
+  color: rgb(236, 236, 236);
+  align-items: start;
+  padding-bottom: .3rem;
+}
+
+.day-humidity {
+  font-size: .75rem;
 }
 
 .hour-section {
@@ -117,6 +136,10 @@ body {
 
 .hour-row {
   background-color: hsl(200, 60%, 75%);
+}
+
+.hour-row-day {
+  background-color: hsl(147, 65%, 50%);
 }
 
 .hour-row:nth-child(2n) {

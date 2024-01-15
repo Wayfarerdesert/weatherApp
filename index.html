@@ -13,43 +13,68 @@
         <div class="main-weather">
           <img class="weather-icon large" src="icons/sun.svg" data-current-icon />
           <div class="header-current-temp">
-            <span data-current-temp>31</span>&deg;C
+            <span data-current-temp>00</span>&deg;C
           </div></div>
+        <div class="main-sub">Cloud cover: <span data-current-cloud-cover>00</span><span class="value-sub-info"> %</span></div>
       </div>
       <div class="header-right">
         <div class="info-group">
           <div class="label">HIGH</div>
-          <div><span data-current-high>32</span>&deg;C</div>
+          <div><span data-current-high>00</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">FL HIGH</div>
-          <div><span data-current-fl-high>27</span>&deg;C</div>
+          <div><span data-current-fl-high>00</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">WIND</div>
           <div>
-            <span data-current-wind>9</span
+            <span data-current-wind>00</span
             ><span class="value-sub-info"> km/h</span>
           </div>
         </div>
 
         <div class="info-group">
           <div class="label">LOW</div>
-          <div><span data-current-low>19</span>&deg;C</div>
+          <div><span data-current-low>00</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">FL LOW</div>
-          <div><span data-current-fl-low>12</span>&deg;C</div>
+          <div><span data-current-fl-low>00</span>&deg;C</div>
         </div>
 
         <div class="info-group">
           <div class="label">PRECIP</div>
           <div>
-            <span data-current-precip>0.1</span
+            <span data-current-precip>0.0</span
             ><span class="value-sub-info"> mm</span>
+          </div>
+        </div>
+
+        <div class="info-group">
+          <div class="label">HUMIDITY</div>
+          <div>
+            <span data-current-humidity>00</span
+            ><span class="value-sub-info"> %</span>
+          </div>
+        </div>
+
+        <div class="info-group">
+          <div class="label">SUNRISE</div>
+          <div>
+            <span data-current-sunrise>00:00</span
+            ><span class="value-sub-info">hs</span>
+          </div>
+        </div>
+
+        <div class="info-group">
+          <div class="label">SUNSET</div>
+          <div>
+            <span data-current-sunset>00:00</span
+            ><span class="value-sub-info">hs</span>
           </div>
         </div>
       </div>
@@ -59,37 +84,44 @@
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Monday</div>
-        <div>32&deg;</div>
+        <div class="day-card-date-num">24.02.2024</div>
+        <div>32&deg;<span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Tuesday</div>
-        <div>32&deg;</div>
+        <div class="day-card-date-num">24.02.2024</div>
+        <div>32&deg;<span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Wednesday</div>
-        <div>32&deg;</div>
+        <div class="day-card-date-num">24.02.2024</div>
+        <div>32&deg;<span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Thursday</div>
-        <div>32&deg;</div>
+        <div class="day-card-date-num">24.02.2024</div>
+        <div>32&deg;<span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Fraiday</div>
-        <div>32&deg;</div>
+        <div class="day-card-date-num">24.02.2024</div>
+        <div>32&deg;<span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Saturday</div>
-        <div>32&deg;</div>
+        <div class="day-card-date-num">24.02.2024</div>
+        <div>32&deg;<span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Sunday</div>
-        <div>32&deg;</div>
+        <div class="day-card-date-num">24.02.2024</div>
+        <div>32&deg;<span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
     </section>
 
@@ -99,7 +131,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>3 PM</div>
+              <div>15<span class="value-sub-info">:00 hs</span></div>
             </div>
           </td>
           <td>
@@ -111,6 +143,12 @@
               <div>31&deg;</div>
             </div>
           </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -134,7 +172,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>4 PM</div>
+              <div>16<span class="value-sub-info">:00 hs</div>
             </div>
           </td>
           <td>
@@ -146,6 +184,12 @@
               <div>31&deg;</div>
             </div>
           </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -169,7 +213,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>5 PM</div>
+              <div>17<span class="value-sub-info">:00 hs</div>
             </div>
           </td>
           <td>
@@ -181,6 +225,12 @@
               <div>31&deg;</div>
             </div>
           </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -204,7 +254,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>6 PM</div>
+              <div>18<span class="value-sub-info">:00 hs</div>
             </div>
           </td>
           <td>
@@ -216,6 +266,12 @@
               <div>31&deg;</div>
             </div>
           </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -239,7 +295,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>6 PM</div>
+              <div>19<span class="value-sub-info">:00 hs</div>
             </div>
           </td>
           <td>
@@ -251,6 +307,12 @@
               <div>31&deg;</div>
             </div>
           </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -274,7 +336,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>7 PM</div>
+              <div>20<span class="value-sub-info">:00 hs</div>
             </div>
           </td>
           <td>
@@ -286,6 +348,12 @@
               <div>31&deg;</div>
             </div>
           </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -309,7 +377,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>8 PM</div>
+              <div>21<span class="value-sub-info">:00 hs</div>
             </div>
           </td>
           <td>
@@ -321,6 +389,12 @@
               <div>31&deg;</div>
             </div>
           </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -344,7 +418,7 @@
           <td>
             <div class="info-group">
               <div class="label">Thursday</div>
-              <div>9 PM</div>
+              <div>22:00<span class="value-sub-info"> hs</div>
             </div>
           </td>
           <td>
@@ -356,41 +430,12 @@
               <div>31&deg;</div>
             </div>
           </td>
-          <td>
-            <div class="info-group">
-              <div class="label">Fl Temp</div>
-              <div>25&deg;</div>
-            </div>
-          </td>
-          <td>
-            <div class="info-group">
-              <div class="label">Wind</div>
-              <div>6<span class="value-sub-info">km/h</span></div>
-            </div>
-          </td>
-          <td>
-            <div class="info-group">
-              <div class="label">Precip</div>
-              <div>0<span class="value-sub-info">mm</span></div>
-            </div>
-          </td>
-        </tr>
-        <tr class="hour-row">
-          <td>
-            <div class="info-group">
-              <div class="label">Thursday</div>
-              <div>10 PM</div>
-            </div>
-          </td>
-          <td>
-            <img src="icons/cloud.svg" class="weather-icon" />
-          </td>
-          <td>
-            <div class="info-group">
-              <div class="label">Temp</div>
-              <div>31&deg;</div>
-            </div>
-          </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span>57<span class="value-sub-info"> %</span></div>
+          </div>
+        </td>
           <td>
             <div class="info-group">
               <div class="label">Fl Temp</div>
@@ -418,7 +463,8 @@
       <div class="day-card">
         <img data-icon class="weather-icon" />
         <div class="day-card-date" data-date></div>
-        <div><span data-temp></span><span>&deg;C</span></div>
+        <div class="day-card-date-num" data-day>24.02.2024</div>
+        <div><span data-temp></span><span>&deg;C </span><span class="value-sub-info" data-humidity>00</span ><span class="value-sub-info">%</span></div>
       </div>
     </template>
 
@@ -427,7 +473,7 @@
         <td>
           <div class="info-group">
             <div class="label" data-day></div>
-            <div data-time></div>
+            <div><span data-time></span><span class="value-sub-info">:00 hs</span></div>
           </div>
         </td>
         <td>
@@ -441,6 +487,12 @@
         </td>
         <td>
           <div class="info-group">
+            <div class="label">Humidity</div>
+            <div><span data-humidity></span><span class="value-sub-info">%</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
             <div class="label">Fl Temp</div>
             <div><span data-fl-temp></span><span>&deg;C</span></div>
           </div>
@@ -448,13 +500,13 @@
         <td>
           <div class="info-group">
             <div class="label">Wind</div>
-            <div><span data-wind></span><span class="value-sub-info"> km/h</span></div>
+            <div><span data-wind></span><span class="value-sub-info">km/h</span></div>
           </div>
         </td>
         <td>
           <div class="info-group">
             <div class="label">Precip</div>
-            <div><span data-precip></span><span class="value-sub-info"> mm</span></div>
+            <div><span data-precip></span><span class="value-sub-info">mm</span></div>
           </div>
         </td>
       </tr>
