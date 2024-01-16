@@ -8,7 +8,7 @@ body {
   margin: 1rem;
   /* background-color: hsl(200, 100%, 85%); */
   /* background-color: hsl(201, 100%, 59%); */
-  background: linear-gradient(to bottom, hsl(201, 100%, 59%), hsl(200, 100%, 59%), hsl(200, 100%, 85%));
+  background: linear-gradient(to bottom, hsl(201, 100%, 59%), hsl(270, 91%, 71%), hsl(270, 98%, 67%), hsl(0, 0%, 21%));
   color: hsl(200, 100%, 10%);
   font-family: sans-serif;
 }
@@ -30,6 +30,43 @@ body {
   margin: .5rem;
   padding: .5rem;
   border-right: 2px solid hsl(200, 100%, 10%);
+}
+
+.search-container{
+  border: 1px solid;
+  border-radius: 5rem;
+  padding: 0 .5rem;
+  margin-bottom: .5rem;
+  background-color: hsl(201, 100%, 59%);
+  position: relative;
+}
+
+td{
+  padding: 0;
+}
+
+.element-container{
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.search-location {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(201, 100%, 59%);
+  font-size: small;
+  font-weight: lighter;
+  padding: 0 0 .2rem 0;
+}
+
+.search-location:focus{
+  outline: none;
+}
+
+.search-icon{
+  padding-top: .2rem;
 }
 
 .main-place {
@@ -84,6 +121,12 @@ body {
   color: hsl(200, 100%, 20%);
 }
 
+.label-day {
+  font-weight: light;
+  font-size: .6rem;
+  color: hsl(200, 100%, 20%);
+}
+
 .value-sub-info {
   font-weight: lighter;
   font-size: .75rem;
@@ -107,7 +150,7 @@ body {
   color: rgb(0, 0, 0);
   /* background: hsl(200, 100%, 48%); */
   /* background: hsl(147, 65%, 50%); */
-  background: hsl(42, 91%, 40%);
+  background: hsl(42, 99%, 44%);
 }
 
 .day-card-date {
@@ -124,10 +167,6 @@ body {
   padding-bottom: .3rem;
 }
 
-.day-humidity {
-  font-size: .75rem;
-}
-
 .hour-section {
   width: 100%;
   text-align: center;
@@ -139,12 +178,12 @@ body {
 }
 
 .hour-row-day {
-  background-color: hsl(147, 65%, 50%);
+  background-color: hsl(200, 60%, 65%);
 }
 
-.hour-row:nth-child(2n) {
+/* .hour-row:nth-child(2n) {
   background-color: hsl(200, 60%, 70%);
-}
+} */
 
 .hour-row>td {
   padding: .25rem .5rem;

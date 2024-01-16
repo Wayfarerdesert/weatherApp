@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="img/svg" href="icons/sun.svg" />
-    <title>Wearher App</title>
+    <title>Weather App</title>
   </head>
   <body class="blurred">
     <header class="header">
       <div class="header-left">
+        <div class="search-container">
+          <table class="element-container">
+            <tr>
+              <td>
+                <input class="search-location" type="search" id="search" placeholder="City, Zip Code">
+              </td>
+              <td>
+                <img class="search-icon" src="icons/search.svg"/>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="main-place">My place, Country</div>
         <div class="main-weather">
           <img class="weather-icon large" src="icons/sun.svg" data-current-icon />
@@ -472,7 +484,8 @@
       <tr class="hour-row">
         <td>
           <div class="info-group">
-            <div class="label" data-day></div>
+            <div class="label" data-date></div>
+            <div class="label-day" data-day></div>
             <div><span data-time></span><span class="value-sub-info">:00 hs</span></div>
           </div>
         </td>
