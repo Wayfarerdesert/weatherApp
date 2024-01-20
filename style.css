@@ -6,10 +6,7 @@
 
 body {
   margin: 1rem;
-  /* background-color: hsl(200, 100%, 85%); */
-  /* background-color: hsl(201, 100%, 59%); */
   background: linear-gradient(to bottom, hsl(201, 100%, 59%)0%, hsl(270, 91%, 71%)12%, hsl(271, 36%, 23%)150%);
-  /* background-size: 100% 30%; */
   color: hsl(200, 100%, 10%);
   font-family: sans-serif;
 }
@@ -28,12 +25,12 @@ body {
   display: grid;
   width: 50%;
   justify-content: center;
-  margin: .5rem;
+  margin: .5rem 0;
   padding: .5rem;
-  border-right: 2px solid hsl(200, 100%, 10%);
 }
 
-.search-container{
+/* Search bar styles ================================================= */
+.search-container {
   border: 1px solid;
   border-radius: 5rem;
   padding: 0 .5rem;
@@ -42,11 +39,11 @@ body {
   position: relative;
 }
 
-td{
+td {
   padding: 0;
 }
 
-.element-container{
+.element-container {
   width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -62,34 +59,33 @@ td{
   padding: 0 0 .2rem 0;
 }
 
-.search-location:focus{
+.search-location:focus {
   outline: none;
 }
 
-.search-icon{
+.search-icon {
   padding-top: .2rem;
 }
 
-.mainPlace{
-    margin-bottom: 1rem;
+/* Search bar styles ends ============================================== */
+
+/* Current Weather Styles ============================================== */
+.mainPlace {
+  margin-bottom: 1rem;
 }
 
 .mainPlace,
 .mainPlace-template {
-    display: flex;
-    width: 150%;
-    /* margin-bottom: 1rem; */
+  display: flex;
+  width: 150%;
 }
 
 .locations {
-  /* background-color: red; */
   max-height: 3rem;
   margin-left: .6rem;
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  /* top: .5rem;
-  left: 4.5rem; */
 }
 
 .mainPlace-template:hover {
@@ -103,7 +99,6 @@ td{
 
 [data-location] {
   max-height: 300px;
-  /* Adjust the maximum height as needed */
   overflow-y: auto;
 }
 
@@ -115,6 +110,7 @@ td{
 
 .main-sub {
   font-size: .75rem;
+  margin: .5rem 0 0 1rem;
 }
 
 .weather-icon {
@@ -133,6 +129,7 @@ td{
   margin-left: 1rem;
 }
 
+/* Current Weather Styles  right side =========================================== */
 .header-right {
   display: grid;
   width: 50%;
@@ -140,6 +137,8 @@ td{
   gap: .5rem;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
+  margin: .5rem 0;
+  border-left: 2px solid hsl(200, 100%, 10%);
 }
 
 .info-group {
@@ -166,6 +165,7 @@ td{
   font-size: .75rem;
 }
 
+/* Daily weather section styles  +++++++++++++++++++++++++++++*/
 .day-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, 80px);
@@ -179,11 +179,9 @@ td{
   flex-direction: column;
   align-items: center;
   border: 1px solid #2EFFC0;
-  border-radius: .25rem;
-  padding: .5rem .3rem;
+  border-radius: .75rem;
+  padding: .5rem 0;
   color: rgb(0, 0, 0);
-  /* background: hsl(200, 100%, 48%); */
-  /* background: hsl(147, 65%, 50%); */
   background: hsl(42, 99%, 44%);
 }
 
@@ -191,7 +189,6 @@ td{
   font-size: .75rem;
   font-weight: bold;
   color: rgb(236, 236, 236);
-  margin-top: .5rem;
 }
 
 .day-card-date-num {
@@ -201,6 +198,11 @@ td{
   padding-bottom: .3rem;
 }
 
+.day-card-data {
+  margin-top: .35rem;
+}
+
+/* Hourly weather section styles  +++++++++++++++++++++++++++++*/
 .hour-section {
   width: 100%;
   text-align: center;
@@ -223,13 +225,15 @@ td{
   padding: .25rem .5rem;
 }
 
+/* RESPONSIVE ============================================== */
 @media only screen and (max-width: 500px) {
   .header {
     margin: 2rem 0 1rem 0;
   }
 
-  .header-left {
-    border-right: none;
+  .header-right {
+    border-left: none;
+    padding-top: 3rem;
   }
 
   .day-section {
