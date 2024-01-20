@@ -70,8 +70,41 @@ td{
   padding-top: .2rem;
 }
 
-.mainPlace {
-  margin-bottom: 1rem;
+.mainPlace{
+    margin-bottom: 1rem;
+}
+
+.mainPlace,
+.mainPlace-template {
+    display: flex;
+    width: 150%;
+    /* margin-bottom: 1rem; */
+}
+
+.locations {
+  /* background-color: red; */
+  max-height: 3rem;
+  margin-left: .6rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  /* top: .5rem;
+  left: 4.5rem; */
+}
+
+.mainPlace-template:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 36%);
+}
+
+.country {
+  padding-left: .5rem;
+}
+
+[data-location] {
+  max-height: 300px;
+  /* Adjust the maximum height as needed */
+  overflow-y: auto;
 }
 
 .main-weather {
@@ -147,7 +180,7 @@ td{
   align-items: center;
   border: 1px solid #2EFFC0;
   border-radius: .25rem;
-  padding: .5rem;
+  padding: .5rem .3rem;
   color: rgb(0, 0, 0);
   /* background: hsl(200, 100%, 48%); */
   /* background: hsl(147, 65%, 50%); */

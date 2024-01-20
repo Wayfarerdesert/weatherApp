@@ -13,7 +13,11 @@
           <table class="element-container">
             <tr>
               <td>
-                <input class="search-location" type="search" id="search" placeholder="City, Zip Code">
+                <input
+                class="search-location"
+                type="search" id="search"
+                placeholder="City, Zip Code"
+                data-search>
               </td>
               <td>
                 <img class="search-icon" src="icons/search.svg" onclick="getLocation()"/>
@@ -21,7 +25,12 @@
             </tr>
           </table>
         </div>
-        <div class="mainPlace" data-location-container>My place, Country</div>
+        <div class="locations" data-location-container>
+          <div class="mainPlace" id="userLocation">
+            <div class="city">City<span>,</span></div>
+            <div class="country">Co</div>
+          </div>
+        </div>
         <div class="main-weather">
           <img class="weather-icon large" src="icons/sun.svg" data-current-icon />
           <div class="header-current-temp">
@@ -97,43 +106,43 @@
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Monday</div>
         <div class="day-card-date-num">24.02.2024</div>
-        <div>32&deg;<span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
+        <div>32&deg; <span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Tuesday</div>
         <div class="day-card-date-num">24.02.2024</div>
-        <div>32&deg;<span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
+        <div>32&deg; <span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Wednesday</div>
         <div class="day-card-date-num">24.02.2024</div>
-        <div>32&deg;<span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
+        <div>32&deg; <span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Thursday</div>
         <div class="day-card-date-num">24.02.2024</div>
-        <div>32&deg;<span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
+        <div>32&deg; <span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Fraiday</div>
         <div class="day-card-date-num">24.02.2024</div>
-        <div>32&deg;<span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
+        <div>32&deg; <span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Saturday</div>
         <div class="day-card-date-num">24.02.2024</div>
-        <div>32&deg;<span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
+        <div>32&deg; <span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
       </div>
       <div class="day-card">
         <img src="icons/sun.svg" class="weather-icon" />
         <div class="day-card-date">Sunday</div>
         <div class="day-card-date-num">24.02.2024</div>
-        <div>32&deg;<span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
+        <div>32&deg; <span class="value-sub-info">00</span ><span class="value-sub-info">%</span></div>
       </div>
     </section>
 
@@ -472,9 +481,9 @@
     </table>
 
     <template id="location-template" data-location>
-      <div class="mainPlace" data-location>
-        <div class="header" data-header></div>
-        <div class="body" data-body></div>
+      <div class="mainPlace-template">
+        <div class="city" data-city></div><span>,</span>
+        <div class="country" data-country></div>
       </div>
     </template>
 

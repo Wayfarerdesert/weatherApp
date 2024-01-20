@@ -4,6 +4,10 @@ import { ICON_MAP } from "./iconMap"
 
 navigator.geolocation.getCurrentPosition(positionSuccess, positionError)
 
+let lat;
+let lon;
+let locations;
+
 function positionSuccess({ coords }) {
     getWeather(
         coords.latitude,
@@ -18,12 +22,19 @@ function positionSuccess({ coords }) {
 }
 
 function positionError() {
-    alert("There was an error getting your location. Please allow us to use your location and refesh the page.")
+    alert("There was an error getting your location. Please allow us to use your location and refresh the page.")
 }
 
 //  getWeather(10, 10, Intl.DateTimeFormat().resolvedOptions().timeZone).then(data => {
 //     console.log(data)
 // })
+
+// getWeather(lat, lon, Intl.DateTimeFormat().resolvedOptions().timeZone)
+//     .then(renderWeather)
+//     .catch(e => {
+//         console.log(e)
+//         alert("Error getting weather info.", e)
+//     })
 
 function renderWeather({ current, daily, hourly }) {
     renderCurrentWeather(current)
@@ -127,3 +138,88 @@ function renderHourlyWeather(hourly) {
         hourlySection.append(element)
     });
 }
+
+// ==============================================================
+// ==============================================================
+
+const apiKey = '221cd05a32243b58e1861dc190b7e406';
+
+const userLocationContainer = document.querySelector("[data-location-container]")
+const userLocation = document.querySelector("[data-location]")
+const searchInput = document.querySelector("[data-search")
+
+searchInput.addEventListener('input', handleInput);
+
+function handleInput() {
+    const location = searchInput.value.toLowerCase();
+
+    if (!location) {
+        // Clear the list if the input is empty
+        userLocationContainer.innerHTML = '';
+        return;
+    }
+
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+            userLocationContainer.innerHTML = ''; // Clear previous results
+            locations = data.map(placeData => {
+                const place = userLocation.content.cloneNode(true).children[0];
+                const city = place.querySelector("[data-city]");
+                const country = place.querySelector("[data-country]");
+                city.textContent = placeData.name;
+                country.textContent = placeData.country;
+
+                const { lat, lon } = placeData;
+                // console.log(lat, lon)
+
+                userLocationContainer.append(place);
+
+                return { city: placeData.name, country: placeData.country, element: place, lat, lon };
+            });
+            // console.log(locations);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+
+function handleLocation(event) {
+    const clickedElement = event.target.closest('.mainPlace-template');
+    // userLocation.innerHTML = '';
+    if (clickedElement) {
+        // Remove all results except the clicked one
+        const resultsContainer = document.querySelector('.locations[data-location-container]');
+        resultsContainer.innerHTML = ''; // Clear all results
+
+        // Replace the class of the clicked element
+        clickedElement.classList.remove('mainPlace-template');
+        clickedElement.classList.add('mainPlace');
+
+        // Append only the clicked element back to the container
+        resultsContainer.appendChild(clickedElement);
+
+        // Get the values from the clicked element
+        const city = clickedElement.querySelector("[data-city]").textContent;
+        const country = clickedElement.querySelector("[data-country]").textContent;
+
+        // Extract lat and lon from the corresponding array
+        const { lat: extractedLat, lon: extractedLon } = locations.find(location => location.element === clickedElement);
+
+        // Update global variables with lat and lon
+        lat = extractedLat;
+        lon = extractedLon;
+
+        // Clear the input value
+        if (searchInput) {
+            searchInput.value = '';
+        }
+
+        // Now you have all the values
+        console.log({ city, country, lat, lon });
+        // console.log(lat, lon );
+    }
+}
+
+// Attach the click event listener to the userLocationContainer
+userLocationContainer.addEventListener('click', handleLocation);
