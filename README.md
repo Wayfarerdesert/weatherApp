@@ -49,10 +49,10 @@ This will start the development server, and you can access the app in your brows
 
 ## API Keys
 
-To use the app, you need to obtain API key from OpenWeather. Follow these steps:
+To use the app, you need to obtain the Geocoding API key from OpenWeather. Follow these steps:
 
 1. Create a file named `apiKeys.js` in the root of the project.
-2. Copy and paste: 
+2. Copy and paste:
 
     `export const openWeatherApiKey = 'YOUR_OPEN_WEATHER_API_KEY';`.
 3. Replace the dummy values with your actual API key into the `apiKeys.js` file.
