@@ -1,6 +1,7 @@
 import "./style.css"
 import { getWeather } from "./weather"
 import { ICON_MAP } from "./iconMap"
+import { openWeatherApiKey as apiKey } from "./apiKeys";
 
 let lat;
 let lon;
@@ -8,8 +9,6 @@ let locations;
 
 // ==============================================================
 // ==============================================================
-
-const apiKey = '221cd05a32243b58e1861dc190b7e406';
 
 const userLocationContainer = document.querySelector("[data-location-container]")
 const userLocation = document.querySelector("[data-location]")
