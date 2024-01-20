@@ -6,7 +6,7 @@
 
 body {
   margin: 1rem;
-  background: linear-gradient(to bottom, hsl(201, 100%, 59%)0%, hsl(270, 91%, 71%)12%, hsl(271, 36%, 23%)150%);
+  background: linear-gradient(to bottom, #2eb6ff 0%, #b572f8 12%, #3b2650 150%);
   color: hsl(200, 100%, 10%);
   font-family: sans-serif;
 }
